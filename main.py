@@ -132,6 +132,11 @@ async def places():
     return places
 
 
-@app.get("/min-version")
+@app.get("/min-version/aos")
 def min_version():
-    return Constants.minVersion
+    return Constants.aosMinVersion
+
+
+@app.get("/min-version/ios")
+def min_version():
+    return Constants.iosMinVersion

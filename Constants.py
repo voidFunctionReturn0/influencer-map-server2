@@ -5,4 +5,5 @@ class Platform(Enum):
     YOUTUBE = "YouTube"
 
 
-minVersion = '1.0.0'
+aosMinVersion = '1.0.0'
+iosMinVersion = '1.0.0'
