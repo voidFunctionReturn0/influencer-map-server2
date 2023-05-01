@@ -1,8 +1,11 @@
 from fastapi import FastAPI
+from starlette.responses import FileResponse
 import requests
 from models import Content, Influencer, Place
 from typing import List
 import Constants
+import os
+root = os.path.dirname(os.path.abspath(__file__))
 
 app = FastAPI()
 
@@ -140,3 +143,8 @@ def min_version():
 @app.get("/min-version/ios")
 def min_version():
     return Constants.iosMinVersion
+
+
+@app.get("/privacy-policy")
+def privacy_policy():
+    return FileResponse('privacy-policy.html')
